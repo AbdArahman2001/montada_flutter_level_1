@@ -23,11 +23,14 @@ main() {
   //   false
   // ];
   // list.forEach(checkValue);
-  optionalTest();
+  // optionalTest();
+
+  // void test({int a : 0}) {}
 }
 
 
-void optionalTest({int?a}){
+void optionalTest([int? a,int? b]){
+  a = a??0+2;
 print(a);
 }
 
@@ -46,8 +49,15 @@ void checkValue(dynamic val) {
 test() {
   return "any";
 }
+  typedef LoggerFunction = void Function(String msg);
 
+void test2(void Function(String msg)){
+
+}
+
+  
 class Test {
+
   static int a = 9;
   compare_2(int val) {
     a += 10;
@@ -76,3 +86,15 @@ class Test {
 // hint: don't pass the anonymous function explicity.
 // List<dunamic> list = ["ahmed",32,true,22,"montada","flutter",43.5,false];
 
+// optioinal parameters
+// positional parameters
+
+// write two functions:
+// first: has five named parameters: two of them are required.
+// second : has three optional positonal parameters
+// call the tow functions in main function
+
+//types of parameters:
+// 1- required positional ()
+// 2- optional positional ([])
+// 3- named               ({}) 
