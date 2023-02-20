@@ -1,15 +1,31 @@
+import 'dart:io';
+
 import '../../lec04_functions_2.dart';
 import '../dummy_data.dart';
 import 'Product.dart';
 
+class Example {
+  final a;
+// Private constructor
+  Example._(this.a);
+
+  factory Example(int value) {
+    final c = value * 3;
+    return Example._(c);
+  }
+} 
+
 void main(List<String> args) {
-  List<Person> persons = dummyData.map((map) => Person.fromMap(map)).toList();
-  print(persons[0].id);
-  print(persons[0].title);
-  print(persons[0].stock);
-  print(persons[0].thumbnail);
-  print(persons[0].category);
-  print(persons[0].brand);
+// singleton pattern
+  late final contents;
+
+  // List<Person> persons = dummyData.map((map) => Person.fromMap(map)).toList();
+  // print(persons[2].id);
+  // print(persons[0].title);
+  // print(persons[0].stock);
+  // print(persons[0].thumbnail);
+  // print(persons[0].category);
+  // print(persons[0].brand);
 
   // Test.test();
   // Fraction value = Fraction(1,2);
@@ -20,6 +36,10 @@ void main(List<String> args) {
   // print(teacher2.a);  //
   // print(teacher2.b);  //
 }
+void _(){
+
+}
+Example example1 = Example(2);
 
 // super class
 class Teacher {
