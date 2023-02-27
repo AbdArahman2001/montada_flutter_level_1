@@ -13,9 +13,13 @@ class Fraction {
   final int _numerator;
   final int _denominator;
   Fraction(this._numerator, this._denominator);
+  
   Fraction operator -(Fraction other) {
     return Fraction(
         _numerator * other._denominator - _denominator * other._numerator,
         _denominator * other._denominator);
   }
+
+  @override
+  bool operator ==(Object other) => true;
 }
