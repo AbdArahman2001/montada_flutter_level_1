@@ -61,7 +61,10 @@ class Fraction {
 // denominator cannot be 0 because 0/0 is not defined!
 
   Fraction.value() : this.one();
-
+   
+  factory Fraction.fromString(String str){
+     return Fraction(2,3);
+   }
 // Fraction.zero() :
 // _numerator = 0,
 // _denominator = 1;

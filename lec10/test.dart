@@ -1,16 +1,19 @@
 
 void main(List<String> args) {
-  Test1 test = Test1();
-  test.test();
+  // Test1 test = Test1();
+  // test.test();
 }
 
- abstract class Test{
-  void test(){
-    print("hello");
-  }
+ abstract class Test implements Test1{
+  // void test(){
+  //     print("hello");
+  // }
 }
 
-class Test1 extends C implements Test{
+abstract class Test1 {
+ 
+  void test(){}
+  
   
 }
 
@@ -25,9 +28,7 @@ class B extends A {
 }
 
 abstract class C {
-  void test(){
-    print("welcome");
-  } //abstract method
+  void test(); //abstract method
   void test1(){ // concreate method
 
   }
